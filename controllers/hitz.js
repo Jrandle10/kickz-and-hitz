@@ -27,15 +27,15 @@ function create(req, res) {
 
 function show(req, res) {
   Hit.findById(req.params.id)
-  .populate('owner')
+  .populate("owner")
   .then(hit => {
-    res.render('hitz/show', {
+    res.render("hitz/show", {
       hit,
-      title: '🎵'
+      title: "🎵show"
     })
   })
   .catch(err => {
-    res.redirect('/hitz')
+    res.redirect("/hitz")
   })
 }
 
