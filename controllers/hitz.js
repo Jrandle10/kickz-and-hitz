@@ -31,7 +31,7 @@ function show(req, res) {
   .then(hit => {
     res.render("hitz/show", {
       hit,
-      title: "🎵show"
+      title: "🎵 show"
     })
   })
   .catch(err => {
