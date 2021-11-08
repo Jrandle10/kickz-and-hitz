@@ -25,7 +25,22 @@ function create(req, res) {
 }
 
 
+function show(req, res) {
+  Hit.findById(req.params.id)
+  .populate('owner')
+  .then(hit => {
+    res.render('hitz/show', {
+      hit,
+      title: '🎵'
+    })
+  })
+  .catch(err => {
+    res.redirect('/hitz')
+  })
+}
+
 export {
   index,
   create,
+  show
 }

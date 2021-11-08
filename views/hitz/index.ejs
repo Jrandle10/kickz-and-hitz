@@ -1,20 +1,11 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section>
-  <h1>Hitz on Hitz!</h1>
-  <h2> Hitz with a side of feels!</h2>
-	<ul>
-  <% hitz.forEach(hit => { %>
-    <li>🎶 <%= hit.name %> makes me feel <%= hit.emotion %></li>
-  <% }) %>
-  </ul>
-</section>
 
 <section>
   <h1>Hitz! 🎵</h1>
   <% if (user) { %>
-    <h2>Add a song and piack an emotion</h2>
+    <h2>Add a song and pick an emotion</h2>
     <form action="/hitz" method="POST">
       <label>
         Artist:
@@ -29,10 +20,23 @@
         <select name="emotion" id="emotion-list">
           <option value="happy">Happy!🙂</option>
         </select>
-       <button type="submit">Add Hit</button> 
+        <button type="submit">Add Hit</button> 
       </label>
     </form>
-<%  } %> 
+    <%  } %> 
+
+    <section>
+      <h1>Hitz on Hitz!</h1>
+      <h2> Hitz with a side of feels!</h2>
+      <ul>
+      <% hitz.forEach(hit => { %>
+        <li>
+          🎶
+           <a href="/tacos/<%= hit._id %>"><%= hit.name %></a> makes me feel <%= hit.emotion %>
+        </li>
+      <% }) %>
+      </ul>
+    </section>
 </section>
 
 <%- include('../partials/footer') %>
