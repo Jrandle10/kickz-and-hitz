@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Hitz on Hitz!</h1>
+  <h2> Hitz with a side of feels!</h2>
+	<ul>
+  <% hitz.forEach(hit => { %>
+    <li>🎶 <%= hit.name %> makes me feel <%= hit.emotion %></li>
+  <% }) %>
+  </ul>
+</section>
+
+<%- include('../partials/footer') %>
