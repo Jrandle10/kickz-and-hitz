@@ -11,7 +11,7 @@ router.get('/', hitzCtrl.index)
 // localhost:3000/hitz
 router.post('/', isLoggedIn, hitzCtrl.create)
 // localhost:3000/:id
-router.get('/:id', tacosCtrl.show)
+router.get('/:id', hitzCtrl.show)
 
 
 

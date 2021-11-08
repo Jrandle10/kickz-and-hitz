@@ -19,6 +19,7 @@
         Emotion:
         <select name="emotion" id="emotion-list">
           <option value="happy">Happy!🙂</option>
+          <option value="sad">Sad!🙁</option>
         </select>
         <button type="submit">Add Hit</button> 
       </label>
@@ -32,7 +33,8 @@
       <% hitz.forEach(hit => { %>
         <li>
           🎶
-           <a href="/tacos/<%= hit._id %>"><%= hit.name %></a> makes me feel <%= hit.emotion %>
+           <a href="/hitz/<%= hit._id %>"><%= hit.name %></a> 
+           makes me feel <%= hit.emotion %>
         </li>
       <% }) %>
       </ul>
