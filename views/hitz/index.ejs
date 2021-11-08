@@ -11,4 +11,28 @@
   </ul>
 </section>
 
+<section>
+  <h1>Hitz! 🎵</h1>
+  <% if (user) { %>
+    <h2>Add a song and piack an emotion</h2>
+    <form action="/hitz" method="POST">
+      <label>
+        Artist:
+        <input type="text" name="artist" autocomplete="off">
+      </label>
+      <label>
+        Name:
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Emotion:
+        <select name="emotion" id="emotion-list">
+          <option value="happy">Happy!🙂</option>
+        </select>
+       <button type="submit">Add Hit</button> 
+      </label>
+    </form>
+<%  } %> 
+</section>
+
 <%- include('../partials/footer') %>

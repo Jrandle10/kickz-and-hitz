@@ -13,7 +13,19 @@ function index(req, res) {
   })
 }
 
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  Hit.create(req.body)
+  .then(hit => {
+    res.redirect('/hitz')
+  })
+  .catch(err => {
+    res.redirect('/hitz')
+  })
+}
+
 
 export {
   index,
+  create,
 }
