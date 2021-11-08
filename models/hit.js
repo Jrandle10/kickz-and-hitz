@@ -7,3 +7,9 @@ const hitSchema = new Schema({
   name: String,
   emotion: [String]
 })
+
+const Hit = mongoose.model('Hit', hitSchema)
+
+export {
+  Hit
+}
