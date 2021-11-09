@@ -1,6 +1,8 @@
+
 import { Profile } from '../models/profile.js'
 
 function index(req, res) {
+  console.log('Profiles')
   Profile.find({})
   .then(profiles => {
     res.render('profiles/index', {
