@@ -2,9 +2,9 @@ import { Hit } from '../models/hit.js'
 
 function index(req, res) {
   Hit.find({})
-  .then(hitz => {
+  .then(hit => {
     res.render('hitz/index', {
-      hitz,
+      hit,
       title: '🎵'
     })
   })
@@ -56,7 +56,7 @@ function edit(req,res) {
 
 function update(req, res) {
   Hit.findById(req.params.id)
-  .then(taco => {
+  .then(hit => {
     if (hit.owner.equals(req.user.profile._id)) {
       hit.updateOne(req.body, {new:true})
       .then(() => {
