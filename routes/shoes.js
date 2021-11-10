@@ -14,6 +14,8 @@ router.get('/:id/edit', isLoggedIn, shoesCtrl.edit)
 router.post('/', isLoggedIn, shoesCtrl.create)
 //localhost:3000/shoes/:id
 router.put('/:id', isLoggedIn, shoesCtrl.update)
+//localhost:3000/shoes/:id
+router.delete('/:id', isLoggedIn, shoesCtrl.delete)
 
 
 

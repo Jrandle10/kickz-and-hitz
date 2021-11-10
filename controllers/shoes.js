@@ -74,10 +74,30 @@ function update(req, res) {
   })
 }
 
+
+function deleteShoe(req, res) {
+  Shoe.findById(req.params.id)
+  .then(shoe => {
+    if (shoe.owner.equals(req.user.profile._id)) {
+      shoe.delete()
+      .then(() => {
+        res.redirect('/shoes')
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/shoes')
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
   update,
+  deleteShoe as delete,
 }
