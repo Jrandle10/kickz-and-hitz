@@ -14,6 +14,8 @@ router.get('/:id', hitzCtrl.show)
 router.get('/:id/edit', isLoggedIn, hitzCtrl.edit)
 // localhost:3000/hitz
 router.post('/', isLoggedIn, hitzCtrl.create)
+//localhost:3000/hitz/:id
+router.put('/:id', isLoggedIn, hitzCtrl.update)
 
 
 

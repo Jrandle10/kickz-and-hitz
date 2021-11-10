@@ -48,6 +48,28 @@ function edit(req,res) {
       title: 'edit 🎵'
     })
   })
+  .catch(err => {
+    res.redirect("/hitz")
+    console.log(err)
+  })
+}
+
+function update(req, res) {
+  Hit.findById(req.params.id)
+  .then(taco => {
+    if (hit.owner.equals(req.user.profile._id)) {
+      hit.updateOne(req.body, {new:true})
+      .then(() => {
+        res.redirect(`/hitz/${hit._id}`)
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    res.redirect("/hitz")
+    console.log(err)
+  })
 }
 
 export {
@@ -55,4 +77,5 @@ export {
   create,
   show,
   edit,
+  update,
 }
