@@ -8,8 +8,10 @@ const router = Router()
 
 // localhost:3000/hitz
 router.get('/', hitzCtrl.index)
-// localhost:3000/:id
+// localhost:3000/hitz/:id
 router.get('/:id', hitzCtrl.show)
+//localhost:3000/hitz/:id/edit
+router.get('/:id/edit', isLoggedIn, hitzCtrl.edit)
 // localhost:3000/hitz
 router.post('/', isLoggedIn, hitzCtrl.create)
 

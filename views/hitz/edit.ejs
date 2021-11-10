@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+
+<section>
+  <h1>Edit this Hit! 🎵</h1>
+  <form action="/hitz/<%= hit._id %>?_method=PUT " method="POST">
+  <label>
+    Artist:
+    <input type="text" name="artist" value="<%= hit.name %>" autocomplete="off">
+  </label>
+  <label>
+    Name:
+    <input type="text" name="name" value="<%= hit.artist %>" autocomplete="off">
+  </label>
+  <label>
+    Emotion:
+    <select name="emotion" id="emotion-list">
+      <option value="happy">Happy!🙂</option>
+      <option value="sad">Sad!🙁</option>
+    </select>
+  </label>
+  <button type="submit">Edit this Hit 🎵</button>
+  </form>
+</section>
+
+
+<%- include('../partials/footer') %>

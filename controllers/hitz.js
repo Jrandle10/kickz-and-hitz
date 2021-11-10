@@ -36,6 +36,17 @@ function show(req, res) {
   })
   .catch(err => {
     res.redirect("/hitz")
+    console.log(err)
+  })
+}
+
+function edit(req,res) {
+  Hit.findById(req.params.id)
+  .then(hit => {
+    res.render('hitz/edit', {
+      hit,
+      title: 'edit 🎵'
+    })
   })
 }
 
@@ -43,4 +54,5 @@ export {
   index,
   create,
   show,
+  edit,
 }
