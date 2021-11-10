@@ -12,11 +12,5 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-  <h2> List of Songs that get's <%= user.profile.name %> in their feels!</h2>
-  <% if (hit.owner.equals(user?.profile._id)) { %>
-      <h3><%= hit.name %> </h3>
-      <h3><%= hit.emotion %> </h3>
-<% } %> 
-</main>
-
+ 
 <%- include('../partials/footer') %>

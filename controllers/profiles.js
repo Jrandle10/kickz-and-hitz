@@ -1,6 +1,6 @@
 
 import { Profile } from '../models/profile.js'
-import { Hit } from '../models/hit.js'
+
 
 function index(req, res) {
   console.log('Profiles')
