@@ -2,9 +2,9 @@ import { Hit } from '../models/hit.js'
 
 function index(req, res) {
   Hit.find({})
-  .then(hit => {
+  .then(hitz => {
     res.render('hitz/index', {
-      hit,
+      hiz,
       title: '🎵'
     })
   })
