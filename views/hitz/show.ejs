@@ -9,6 +9,9 @@
       <form action="/hitz/<%= hit._id %>/edit" method="GET">
         <button class="btn" type="submit">Edit this Hit 🎵 </button>
       </form>
+      <form action="/hitz/<%= hit._id %>?_method=DELETE" method="POST">
+        <button class="btn" type="submit">Delete This Hit 🎵</button>
+      </form>
  <% } %> 
 </section>
 

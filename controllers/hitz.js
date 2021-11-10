@@ -72,10 +72,30 @@ function update(req, res) {
   })
 }
 
+
+function deleteHit(req,res) {
+  Hit.findById(req.params.id)
+  .then(hit => {
+    if (hit.owner.equals(req.user.profile._id)) {
+      hit.delete()
+      .then(() => {
+        res.redirect('/hitz')
+      })
+    } else {
+      throw new Error (' 🚫 Not authorized 🚫 ')
+    }
+  })
+  .catch(err => {
+    res.redirect("/hitz")
+    console.log(err)
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
   update,
+  deleteHit as delete,
 }
