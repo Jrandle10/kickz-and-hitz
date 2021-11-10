@@ -9,8 +9,8 @@ function index(req, res) {
     })
   })
   .catch(err => {
-    console.log(err)
     res.redirect("/shoes")
+    console.log(err)
   })
 }
 
