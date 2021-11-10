@@ -1,0 +1,16 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+
+<section>
+  <p>Straight from the collection of <%= shoe.owner.name %>....</p>
+  <h1><%= shoe.brand %> <%= shoe.name %></h1>
+  <% if (shoe.owner.equals(user?.profile._id)) { %>
+    <form action="/shoes/<%= shoe._id %>/edit" method="GET">
+      <button class="btn" type="submit">Edit this 👟</button>
+    </form>
+  <% } %>
+</section>
+
+
+<%- include('../partials/footer') %>

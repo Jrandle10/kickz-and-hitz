@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+  <h1>Edit these kickz! 👟</h1>
+  <form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
+  <label>
+    Brand:
+    <input type="text" name="brand" value="<%= shoe.brand %>" autocomplete="off">
+  </label>
+  <label>
+    <label>
+      Name:
+      <input type="text" name="name" value="<%= shoe.name %>" autocomplete="off">
+    </label>
+  </label>
+  <label>
+    Name:
+    <input type="text" name="color" value="<%= color.name %>" autocomplete="off">
+  </label>
+  <button type="submit">Edit 👟</button>
+  </form>
+</section>
+
+
+
+<%- include('../partials/footer') %>

@@ -11,6 +11,12 @@
       >
     </div>
   <% } %>
+  <% shoes.forEach(shoe => { %>
+    <li>
+      👟
+      <a href="/shoes/<%= shoe._id %>"><%= shoe.name %></a> 
+    </li>
+  <% }) %>
 </main>
 
 <%- include('./partials/footer') %>
