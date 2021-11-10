@@ -4,12 +4,13 @@ function index(req, res) {
   Hit.find({})
   .then(hitz => {
     res.render('hitz/index', {
-      hiz,
+      hitz,
       title: '🎵'
     })
   })
   .catch(err => {
     res.redirect('/hitz')
+    console.log(err)
   })
 }
 
@@ -21,6 +22,7 @@ function create(req, res) {
   })
   .catch(err => {
     res.redirect('/hitz')
+    console.log(err)
   })
 }
 
