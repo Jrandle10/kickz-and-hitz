@@ -14,7 +14,7 @@
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
     <h2>Songs Added by <%= isSelf?"you":profile.name %> </h2>
     <div id="hitz-profile">
-      <% hitz.forEach(hit => { %>
+      <% hit.forEach(hit => { %>
         <% if(hit.owner.equals(user?.profile._id)) %> 
           <h3><%= hit.name %> makes me feel <%= hit.emotion %>  </h3>
     <%  }); %> 
