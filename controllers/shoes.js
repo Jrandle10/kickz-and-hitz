@@ -21,8 +21,8 @@ function create(req,res) {
     res.redirect('/shoes')
   })
   .catch(err => {
-    console.log(err)
     res.redirect('/shoes')
+    console.log(err)
   })
 }
 

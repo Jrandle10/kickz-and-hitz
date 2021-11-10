@@ -21,4 +21,16 @@
       <button type="submit">Add 👟</button>
     </form>
   <% } %>
+  <section>
+    <h1>All kickz</h1>
+    <ul>
+    <% shoes.forEach(shoe => { %>
+      <li>
+        👟
+         <a href="/shoes/<%= shoe._id %>"><%= shoe.brand %><%= shoe.name %><%= shoe.color %>  </a> 
+      </li>
+    <% }) %>
+    </ul>
+  </section>
+
 </section>
