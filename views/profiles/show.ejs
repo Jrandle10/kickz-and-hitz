@@ -12,11 +12,11 @@
     </div>
   <% } %>
   <h1>It's <%= isSelf ? "you" : profile.name %>!</h1>
-    <h2>Songs Added by <%= isSelf?"you":profile.name %> </h2>
+    <h2>Hitz Added by <%= isSelf?"you":profile.name %> </h2>
     <div id="hitz-profile">
       <% hit.forEach(hit => { %>
         <% if(hit.owner.equals(user?.profile._id)) %> 
-          <h3><%= hit.name %> makes me feel <%= hit.emotion %>  </h3>
+          <h3> When <%= hit.name %> by <%= hit.artist %> comes on my mood changes to <%= hit.emotion %></h3>
     <%  }); %> 
     </div>
 <%- include('../partials/footer') %>

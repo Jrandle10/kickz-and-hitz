@@ -3,8 +3,8 @@
 
 <section>
   <p>Directly from the heart of <%= hit.owner.name %></p>
-  <h1><%= hit.name %> 🎵 </h1>
-  <h2>This song makes me feel so <%= hit.emotion %> </h2>
+  <h1><%= hit.name %> by <%= hit.artist %>  🎵 </h1>
+  <h2>When this song comes I instantly feel <%= hit.emotion %> </h2>
   <% if (hit.owner.equals(user?.profile._id)) { %>
       <form action="/hitz/<%= hit._id %>/edit" method="GET">
         <button class="btn" type="submit">Edit this Hit 🎵 </button>

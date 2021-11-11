@@ -2,9 +2,9 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Shoes! 👟👟👟</h1>
+  <h1>Kickz! 👟</h1>
   <% if (user) { %>
-    <h2>Add a pair of kickz!</h2>
+    <h2>Add a pair of kickz to your collection!</h2>
     <form action="/shoes" method="POST">
       <label>
         Brand: 
@@ -22,12 +22,12 @@
     </form>
   <% } %>
   <section>
-    <h1>All kickz</h1>
+    <h1>All Kickz below</h1>
     <ul>
     <% shoes.forEach(shoe => { %>
       <li>
         👟
-         <a href="/shoes/<%= shoe._id %>"><%= shoe.brand %> <%= shoe.name %> <%= shoe.color %></a> 
+        <a href="/shoes/<%= shoe._id %>"><%= shoe.brand %> <%= shoe.name %></a> - <%= shoe.color %>
       </li>
     <% }) %>
     </ul>

@@ -4,7 +4,7 @@
 
 <section>
   <p>Straight from the collection of <%= shoe.owner.name %>....</p>
-  <h1><%= shoe.brand %> <%= shoe.name %></h1>
+  <h1><%= shoe.brand %> <%= shoe.name %> - <%= shoe.color %> </h1>
   <% if (shoe.owner.equals(user?.profile._id)) { %>
     <form action="/shoes/<%= shoe._id %>/edit" method="GET">
       <button class="btn" type="submit">Edit this 👟</button>

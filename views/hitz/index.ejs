@@ -5,7 +5,7 @@
 <section>
   <h1>Hitz! 🎵</h1>
   <% if (user) { %>
-    <h2>Add a song and pick an emotion</h2>
+    <h2>Add a song and tell us how it makes you feel!</h2>
     <form action="/hitz" method="POST">
       <label>
         Artist:
@@ -35,7 +35,7 @@
         <li>
           🎶
            <a href="/hitz/<%= hit._id %>"><%= hit.name %></a> 
-           makes me feel <%= hit.emotion %>
+           by <%= hit.artist %>  makes me feel <%= hit.emotion %>.
         </li>
       <% }) %>
       </ul>
