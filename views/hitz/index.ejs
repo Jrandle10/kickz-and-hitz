@@ -5,7 +5,7 @@
 <section>
   <h1>Hitz! 🎵</h1>
   <% if (user) { %>
-    <h2>Add a song and tell us how it makes you feel!</h2>
+    <h2>Add a song, and tell us how it makes you feel!</h2>
     <form action="/hitz" method="POST">
       <label>
         Artist:
@@ -18,14 +18,26 @@
       <label>
         Emotion:
         <select name="emotion" id="emotion-list">
-          <option value="happy">Happy!🙂</option>
-          <option value="sad">Sad!🙁</option>
-          <option value="angry">Angry! 😡</option>
+          <option value="Amused">Amused!🤣 </option>
+          <option value="Annoyed">Annoyed.🙄</option>
+          <option value="Anxious">Anxious!😰</option>
+          <option value="Beautiful">Beautiful!🥰</option>
+          <option value="Relaxed">Relaxed!🥱</option>
+          <option value="Dreamy">Dreamy!🤩</option>
+          <option value="Pumped">Pumped!💪</option>
+          <option value="Defiant">Defiant!😈</option>
+          <option value="Cheerful">Cheerful!🥳</option>
+          <option value="Depressed">Depressed!😔</option>
+          <option value="Scared">Scared!😱</option>
+          <option value="Heroic">Heroic!🥸</option>
+          <option value="Beautiful">Beautiful!🥰</option>
+          <option value="Mindblown">Mind-Blown!🤯</option>
         </select>
         <button type="submit">Add Hit</button> 
       </label>
     </form>
     <%  } %> 
+
 
     <section>
       <h1>Hitz on Hitz!</h1>
@@ -35,7 +47,7 @@
         <li>
           🎶
            <a href="/hitz/<%= hit._id %>"><%= hit.name %></a> 
-           by <%= hit.artist %>  makes me feel <%= hit.emotion %>.
+           by <%= hit.artist %>  makes me feel <%= hit.emotion %>!
         </li>
       <% }) %>
       </ul>

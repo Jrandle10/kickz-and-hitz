@@ -2,8 +2,8 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>Welcome to Kickz and Hitz! <%= user ? user.profile.name : "" %></h1>
-  <h2><%= user ? "Use the Nav Bar links to navigate to Profiles, Kickz, and Hitz": "Login with Google to add to your Profile!" %> </h2>
+  <h1>Welcome to Kickz and Hitz, <%= user ? user.profile.name : "Guest!" %></h1>
+  <h3><%= user ? "Use the Nav Bar links to navigate to Profiles, Kickz, and Hitz!": "Login with Google to view profiles, or use nav bar to navigate to Kick, or Hitz!" %></h3>
   <% if (user?.profile.avatar) { %>
     <div>
       <img 

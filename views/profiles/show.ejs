@@ -16,7 +16,7 @@
     <div id="hitz-profile">
       <% hit.forEach(hit => { %>
         <% if(hit.owner.equals(user?.profile._id)) %> 
-          <h3> When <%= hit.name %> by <%= hit.artist %> comes on my mood changes to <%= hit.emotion %></h3>
+          <h3> When <%= hit.name %> by <%= hit.artist %> comes on, my mood changes to <%= hit.emotion %>!</h3>
     <%  }); %> 
     </div>
 <%- include('../partials/footer') %>
