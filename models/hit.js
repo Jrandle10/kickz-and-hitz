@@ -13,7 +13,7 @@ const hitSchema = new Schema({
   },
   emotion: {
   type: String,
-  enum: ['Amused', 'Annoyed', 'Anxious', 'Beautiful', 'Relaxed', 'Dreamy', 'Pumped', 'Defiant', 'Cheerful', 'Depressed', 'Scared', 'Heroic'],
+  enum: ['Amused 🤣', 'Annoyed 🙄', 'Anxious 😰', 'Beautiful 🥰', 'Relaxed 🥱', 'Dreamy 🤩', 'Pumped 💪', 'Defiant 😈', 'Cheerful 🥳', 'Depressed 😔', 'Scared 😱', 'Heroic 🥸', 'MindBlown 🤯'],
   required: true
   },
   owner: {
