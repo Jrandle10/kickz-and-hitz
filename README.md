@@ -26,5 +26,17 @@ Enjoy!
 
 
 # Technologies used
+HTML, CSS, JavaScript, Node.js, Express,MondoDB, Mongoose, Passport, Google OAuth.
+
+#Credits
+
+[google fonts]
+
+
+# Next Steps
+
+- Link Shoe Model to profile so that the your sneaker collection is displayed on your profile.
+- Add link that will take you to the users profile on the Kickz and Hitz detail page.
+- Add more styling to each page to include animations and sound.
 
 
