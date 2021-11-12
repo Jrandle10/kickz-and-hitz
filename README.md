@@ -13,4 +13,8 @@ Enjoy!
 
 # Getting Started
 
-** Click the link and give the app a try! [Deployed App -Heroku](https://kickz-and-hitz.herokuapp.com/)
+**Click the link and give the app a try!** [Deployed App -Heroku](https://kickz-and-hitz.herokuapp.com/)
+
+# Preview
+
+![Home page image](https://imgur.com/hACdAh8)
