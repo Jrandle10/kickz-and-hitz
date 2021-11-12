@@ -1,17 +1,43 @@
-<%- include('./partials/html-head') %>
-<%- include('./partials/nav') %>
-
-<main>
-  <h1>Welcome to Kickz and Hitz, <%= user ? user.profile.name : "Guest!" %></h1>
-  <h3><%= user ? "Use the Nav Bar links to navigate to Profiles, Kickz, and Hitz!": "Login with Google to view profiles, or use nav bar to navigate to Kick, or Hitz!" %></h3>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+    <title><%= title %></title>
+    <% if (!user) { %>
+      <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <% } %>
+  </head>
+  <body>
+    <nav>
+      <a href="/hitz">💿</a>
+      <a href="/profiles">👤</a>
+      <a href="/shoes">👟</a>
+      <% if (user) { %>
+        <a href="/auth/logout">✌️</a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+      <% } %>
+    </nav>
+    <main class="home-index">
+      <h1>Welcome to Kickz and Hitz, <%= user ? user.profile.name : "Guest!" %></h1>
+      <h3><%= user ? "Use the Nav Bar links to navigate to Profiles, Kickz, and Hitz!": "Login with Google to view profiles, or use nav bar to navigate to Kick, or Hitz!" %></h3>
+      <% if (user?.profile.avatar) { %>
+      <div>
+        <img 
         src="<%= user.profile.avatar %>" 
         alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %> 
-</main>
+        >
+      </div>
+      <% } %> 
+    </main>
 
 <%- include('./partials/footer') %>
