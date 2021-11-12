@@ -1,8 +1,5 @@
 html {
   box-sizing: border-box;
-  background: url(/images/css/c3L7Ldg.png);
-  background-repeat: no-repeat, repeat;
-  background-size: cover;
   
 }
 
@@ -34,7 +31,7 @@ body {
 
 
 nav {
-  background-color: rgb(32, 113, 218);
+  background-color: rgb(241, 158, 4);
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -54,17 +51,11 @@ h1 {
 }
 
 h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: 3rem;
-  margin-left: 4%;
-  color: rgb(32, 113, 218);
 }
 
 h3 {
   font-size: 2.4rem;
-  margin: auto auto;
 }
 
 ul {
@@ -114,27 +105,8 @@ nav > a {
   margin-top: 50px;
 }
 
-.🧢  {
+.show-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.📎 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.list-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-

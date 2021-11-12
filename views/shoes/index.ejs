@@ -1,28 +1,53 @@
-<%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/kickz.css" />
+    <title><%= title %></title>
+    <% if (!user) { %>
+      <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <% } %>
+    </head>
+    <body>
+    <nav>
+      <a href="/hitz">💿</a>
+      <a href="/profiles">👤</a>
+      <a href="/shoes">👟</a>
+      <% if (user) { %>
+        <a href="/auth/logout">✌️</a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+            <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+            </button>
+        </a>
+      <% } %>
+    </nav>
+
 
 <section>
-  <h1>Kickz! 👟</h1>
+  <h1 class="🧢">Kickz! 👟</h1>
   <% if (user) { %>
-    <h2>Add a pair of kickz to your collection!</h2>
-    <form action="/shoes" method="POST">
+    <h2 class="🧢">Add a pair of kickz to your collection!</h2>
+    <form class="form" action="/shoes" method="POST">
       <label>
         Brand: 
         <input type="text" name="brand" autocomplete="off">
-      </label>
+      </label><br>
       <label>
         Name:
         <input type="text" name="name" autocomplete="off">
-      </label>
+      </label><br>
       <label>
         Color:
         <input type="text" name="color" autocomplete="off">
-      </label>
+      </label><br>
       <button type="submit">Add 👟</button>
     </form>
   <% } %>
   <section>
-    <h1>All Kickz</h1>
+    <h1 class="📎">All Kickz</h1>
     <ul>
     <% shoes.forEach(shoe => { %>
       <li>

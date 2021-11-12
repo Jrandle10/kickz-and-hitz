@@ -4,6 +4,7 @@
 
 <section>
   <p>Straight from the collection of <%= shoe.owner.name %>....</p>
+  <div class="show-page">
   <h1><%= shoe.brand %> <%= shoe.name %> - <%= shoe.color %> </h1>
   <% if (shoe.owner.equals(user?.profile._id)) { %>
     <form action="/shoes/<%= shoe._id %>/edit" method="GET">
@@ -13,6 +14,7 @@
       <button class="btn" type="submit">Delete 👟</button>
     </form>
   <% } %>
+</div>
 </section>
 
 

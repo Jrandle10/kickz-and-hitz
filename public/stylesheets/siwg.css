@@ -1,5 +1,5 @@
 .siwg {
-  background: url(/images/auth/google/siwg_light_normal.png);
+  background: url(/images/auth/google/siwg_dark_normal.png);
   cursor: pointer;
   border: none;
   width: 191px;
@@ -12,7 +12,7 @@
 
 .siwg:focus,
 .siwg-link:focus {
-  background: url(/images/auth/google/siwg_light_focus.png);
+  background: url(/images/auth/google/siwg_dark_focus.png);
   outline: none;
 }
 
