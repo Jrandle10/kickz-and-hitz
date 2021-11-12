@@ -17,4 +17,4 @@ Enjoy!
 
 # Preview
 
-![Home page image](https://imgur.com/hACdAh8)
+<img src= https://kickz-and-hitz.herokuapp.com>
