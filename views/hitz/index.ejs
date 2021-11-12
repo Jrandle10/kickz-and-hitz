@@ -28,11 +28,10 @@
 
 
 <section>
-  <div class="header">
-    <h1> Hitz! 🎵</h1>
+  
+    <h1 class="🧢"> Hitz! 🎵</h1>
     <% if (user) { %>
-    <h2>Add a song, and tell us how it makes you feel!</h2>
-  </div>
+    <h2 class="🧢">Add a song, and tell us how it makes you feel!</h2>  
     <form action="/hitz" method="POST">
       <label>
         Artist:
@@ -64,9 +63,9 @@
     </form>
     <%  } %> 
     <section>
-      <h1>Hitz on Hitz!</h1>
-      <h2> Hitz with a side of feels!</h2>
-      <ul>
+      <h1 class="📎">Hitz with a side of feels!</h1>
+      <h2> Hit list!</h2>
+      <ul class="list-items">
       <% hitz.forEach(hit => { %>
         <li>
           🎶

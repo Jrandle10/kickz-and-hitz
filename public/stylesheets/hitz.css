@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  background: url(/images/css/c3L7Ldg.png);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
   
 }
 
@@ -25,7 +28,7 @@ body {
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   min-height: 100vh;
-  
+  color: rgb(246, 63, 63);
 }
 
 
@@ -51,11 +54,17 @@ h1 {
 }
 
 h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 3rem;
+  margin-left: 4%;
+  color: black;
 }
 
 h3 {
   font-size: 2.4rem;
+  margin: auto auto;
 }
 
 ul {
@@ -105,7 +114,21 @@ nav > a {
   margin-top: 50px;
 }
 
-.header {
+.🧢  {
   display: flex;
-  
+  flex-direction: column;
+  align-items: center;
 }
+
+.📎 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
