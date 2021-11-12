@@ -1,11 +1,38 @@
-<%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/hitz.css" />
+    <title><%= title %></title>
+    <% if (!user) { %>
+      <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <% } %>
+    </head>
+    <body>
+    <nav>
+      <a href="/hitz">💿</a>
+      <a href="/profiles">👤</a>
+      <a href="/shoes">👟</a>
+      <% if (user) { %>
+        <a href="/auth/logout">✌️</a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+            <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+            </button>
+        </a>
+      <% } %>
+    </nav>
+
 
 
 <section>
-  <h1>Hitz! 🎵</h1>
-  <% if (user) { %>
+  <div class="header">
+    <h1> Hitz! 🎵</h1>
+    <% if (user) { %>
     <h2>Add a song, and tell us how it makes you feel!</h2>
+  </div>
     <form action="/hitz" method="POST">
       <label>
         Artist:
@@ -36,8 +63,6 @@
       </label>
     </form>
     <%  } %> 
-
-
     <section>
       <h1>Hitz on Hitz!</h1>
       <h2> Hitz with a side of feels!</h2>
@@ -45,12 +70,14 @@
       <% hitz.forEach(hit => { %>
         <li>
           🎶
-           <a href="/hitz/<%= hit._id %>"><%= hit.name %></a> 
-           by <%= hit.artist %>  makes me feel <%= hit.emotion %> !
+          <a href="/hitz/<%= hit._id %>"><%= hit.name %></a> 
+          by <%= hit.artist %>  makes me feel <%= hit.emotion %> !
         </li>
       <% }) %>
       </ul>
     </section>
 </section>
+
+
 
 <%- include('../partials/footer') %>
