@@ -11,10 +11,20 @@ If you don't have a Google account, no worries, you can still browse the list of
 Enjoy!
 
 
-# Getting Started
+# Deployed App
 
 **Click the link and give the app a try!** [Deployed App -Heroku](https://kickz-and-hitz.herokuapp.com/)
+
+# Trello Board
+
+![Trello Board](https://trello.com/b/HhqfYJn4)
 
 # Preview
 
 <img src= https://kickz-and-hitz.herokuapp.com>
+
+
+
+# Technologies used
+
+
