@@ -21,9 +21,13 @@ Enjoy!
 
 # Preview
 
-<img src= https://kickz-and-hitz.herokuapp.com>
+<img width="1161" alt="Screen Shot 2021-11-12 at 1 27 45 AM" src="https://user-images.githubusercontent.com/91491549/141439203-ff3ad85e-1f1a-416b-8d66-dea1182eb253.png">
 
+<img width="583" alt="Screen Shot 2021-11-12 at 1 28 12 AM" src="https://user-images.githubusercontent.com/91491549/141439245-e2561a30-456a-4ebb-a4f6-9ef33d6ffb00.png">
 
+<img width="1143" alt="Screen Shot 2021-11-12 at 1 29 21 AM" src="https://user-images.githubusercontent.com/91491549/141439275-2663d36a-a208-436e-bb99-7f5202dc801d.png">
+
+<img width="1153" alt="Screen Shot 2021-11-12 at 1 28 46 AM" src="https://user-images.githubusercontent.com/91491549/141439329-36101e66-c0a9-4485-a6c6-41343210d4dd.png">
 
 # Technologies used
 HTML, CSS, JavaScript, Node.js, Express,MondoDB, Mongoose, Passport, Google OAuth.
