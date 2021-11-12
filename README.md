@@ -17,7 +17,7 @@ Enjoy!
 
 # Trello Board
 
-![Trello Board](https://trello.com/b/HhqfYJn4)
+[Trello Board](https://trello.com/b/HhqfYJn4)
 
 # Preview
 
